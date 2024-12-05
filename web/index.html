@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    <meta name="description" content="nunu rcc stack是一个基于以太坊区块链的非同质化的交易抵押平台">
+    <meta name="author" content="ming">
+    <title>首页</title>
+    <link href="./asserts/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./asserts/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="./asserts/js/bootstrap-multitabs/multitabs.min.css" rel="stylesheet">
+    <link href="./asserts/css/style.min.css" rel="stylesheet">
+    <style>
+        .list-icon {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            align-content: center;
+            text-align: center;
+        }
+
+        .list-icon li {
+            min-width: 100px;
+            min-height: 60px;
+            align-content: center;
+            text-align: center;
+        }
+
+        .list-icon li span {
+            font-size: 16px;
+        }
+
+        .list-icon li a {
+            color: #868e96;
+        }
+
+        .list-icon li a.active,
+        .list-icon li a:hover {
+            color: #33cabb;
+        }
+
+        .hcqFont{position:relative;letter-spacing:.07em;font-size:3em;font-weight:normal;margin:0 auto}
+        .hcqStyle1{color:hsl(184,80%,25%);text-shadow:0 0 1px currentColor,/*highlight*/-1px -1px 1px hsl(184,80%,50%),0 -1px 1px hsl(184,80%,55%),1px -1px 1px hsl(184,80%,50%),/*light shadow*/1px 1px 1px hsl(184,80%,10%),0 1px 1px hsl(184,80%,10%),-1px 1px 1px hsl(184,80%,10%),/*outline*/-2px -2px 1px hsl(184,80%,15%),-1px -2px 1px hsl(184,80%,15%),0 -2px 1px hsl(184,80%,15%),1px -2px 1px hsl(184,80%,15%),2px -2px 1px hsl(184,80%,15%),2px -1px 1px hsl(184,80%,15%),2px 0 1px hsl(184,80%,15%),2px 1px 1px hsl(184,80%,15%),-2px 0 1px hsl(184,80%,15%),-2px -1px 1px hsl(184,80%,15%),-2px 1px 1px hsl(184,80%,15%),/*dark shadow*/2px 2px 2px hsl(184,80%,5%),1px 2px 2px hsl(184,80%,5%),0 2px 2px hsl(184,80%,5%),-1px 2px 2px hsl(184,80%,5%),-2px 2px 2px hsl(184,80%,5%)}
+        .head-hr{
+            border: none; /* 移除默认的边框 */
+            height: 2px; /* 设置高度 */
+            background-color:  #0BA1E4; /* 设置颜色 */
+            width: 100%; /* 设置宽度 */
+            position: absolute;
+            margin: 0 0 0 0;
+
+        }
+
+    </style>
+</head>
+<script type="text/javascript" src="./asserts/js/jquery.min.js"></script>
+<script type="text/javascript" src="./asserts/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./asserts/js/bootstrap-multitabs/multitabs.js"></script>
+<script type="text/javascript" src="./asserts/js/main.min.js"></script>
+<script>
+    $(function () {
+        $('.list-icon').find('a').on('click', function () {
+            $(this).addClass('active');
+            $(this).parent().siblings().find('a').removeClass('active');
+
+            //iframe动态跳转页面
+            console.info("11111")
+            $('#iframe-content').attr("src", "html/about.html");
+        })
+        $('#iframe-content').attr("src", "html/about.html");
+      
+    })
+
+</script>
+
+<body>
+    <div class="lyear-layout-web">
+        <div class="lyear-layout-container" >
+            <!--头部信息-->
+            <header class="row" style="background-color: white; height: 100px;">
+                <div class="col-3" id="logo" style="align-content: center; text-align: center;">
+                    <a href="index.html"><span class="hcqFont hcqStyle1"  style="font-size: 30px; font-family: monospace; color: #0BA1E4; font-weight:bold;" >RCC代币质押</span></a>
+                </div>
+
+                <div class="col-5" style="align-content: center; text-align: center;">
+                    <ul class="list-unstyled list-icon clearfix nav">
+                        <li class="nav-item"><a href="index.html" class="active multitabs"><span>首页</span></a></li>
+                        <li><a class="multitabs" href="#!"><span>质押池</span></a></li>
+                        <li><a href="#!"><span>开启质押</span></a></li>
+                        <li><a href="#!"><span>获取收益</span></a></li>
+                        <li><a href="#!"><span>关于我们</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-3" style="align-content: center; text-align: center;">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-4" type="search" placeholder="请输入交易账户地址" aria-label="Search" />
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+                      </form>
+                </div>
+
+                <div class="col-1" style="align-content: center; text-align: center;">
+                    <a href="#!" class="btn btn-success btn-xs"><span>登录</span></a>
+                </div>
+               
+            </header>
+            <hr class="head-hr"/>
+            <!--End 头部信息-->
+
+            <!--页面主要内容-->
+            <main class="lyear-layout-content" style="background-color: #E8E8E8;">
+                <iframe id="iframe-content" width="90%" height="100%" frameborder="0" scrolling="auto">
+
+                    
+                </iframe>
+            </main>
+            <!--End 页面主要内容-->
+        </div>
+    </div>
+</body>
+
+</html>
