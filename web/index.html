@@ -69,18 +69,21 @@
             $(this).parent().siblings().find('a').removeClass('active');
 
             //iframe动态跳转页面
-            console.info("11111")
-            $('#iframe-content').attr("src", "html/about.html");
+            var url = $(this).attr("data-url");
+            console.info("url: "+url)
+            if(url != ''){
+                $('#iframe-content').attr("src", url);
+            }
         })
-        $('#iframe-content').attr("src", "html/about.html");
+        $('#iframe-content').attr("src", "html/home/home_index.html");
       
     })
 
 </script>
 
-<body>
-    <div class="lyear-layout-web">
-        <div class="lyear-layout-container" >
+<body style="  overflow-y: hidden;">
+    <div class="lyear-layout-web" >
+        <div class="lyear-layout-container">
             <!--头部信息-->
             <header class="row" style="background-color: white; height: 100px;">
                 <div class="col-3" id="logo" style="align-content: center; text-align: center;">
@@ -89,23 +92,21 @@
 
                 <div class="col-5" style="align-content: center; text-align: center;">
                     <ul class="list-unstyled list-icon clearfix nav">
-                        <li class="nav-item"><a href="index.html" class="active multitabs"><span>首页</span></a></li>
-                        <li><a class="multitabs" href="#!"><span>质押池</span></a></li>
-                        <li><a href="#!"><span>开启质押</span></a></li>
-                        <li><a href="#!"><span>获取收益</span></a></li>
-                        <li><a href="#!"><span>关于我们</span></a></li>
+                        <li><a href="index.html" class="active multitabs"><span>首页</span></a></li>
+                        <li><a class="multitabs" href="#!" data-url="html/pool/pool_index.html"><span>质押池</span></a></li>
+                        <li><a class="multitabs"  href="#!" data-url="html/pool/pool_start.html"><span>开启质押</span></a></li>
+                        <li><a class="multitabs"  href="#!" data-url="html/prize/prize_index.html"><span>获取收益</span></a></li>
+                        <li><a class="multitabs"  href="#!" data-url="html/about/about_index.html"><span>关于我们</span></a></li>
                     </ul>
                 </div>
 
-                <div class="col-3" style="align-content: center; text-align: center;">
+                <div class="col-4" style="align-content: center; text-align: center;">
                     <form class="form-inline">
                         <input class="form-control mr-sm-4" type="search" placeholder="请输入交易账户地址" aria-label="Search" />
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
-                      </form>
-                </div>
-
-                <div class="col-1" style="align-content: center; text-align: center;">
-                    <a href="#!" class="btn btn-success btn-xs"><span>登录</span></a>
+                        <a  style="margin-left: 15%;"  href="#!" class="btn btn-success btn-xs"><span>登录</span></a>
+                    </form>
+                    
                 </div>
                
             </header>
@@ -113,8 +114,8 @@
             <!--End 头部信息-->
 
             <!--页面主要内容-->
-            <main class="lyear-layout-content" style="background-color: #E8E8E8;">
-                <iframe id="iframe-content" width="90%" height="100%" frameborder="0" scrolling="auto">
+            <main class="lyear-layout-content">
+                <iframe id="iframe-content" width="95%" height="100%" frameborder="0" scrolling="auto">
 
                     
                 </iframe>
