@@ -28,7 +28,7 @@
     font-size: 10px;
     width: 16px;
     height: 16px;
-    top: 16px;
+    top: 15px;
     right: 10px;
     color: #c2c2c2;
     cursor: pointer;
@@ -48,7 +48,7 @@
     -webkit-transform: scale(.8);
     transform: scale(.8);
     display: inline-block;
-    /*vertical-align: -1px;*/
+    vertical-align: -1px;
 }
 li:hover .mt-close-tab {
     display: inline;

@@ -548,60 +548,20 @@ if (typeof jQuery === "undefined") {
         activeMenu: function(navTab) {
             // 点击选项卡时，左侧菜单栏跟随变化
             var $navObj       = $("a[href$='" + $(navTab).data('url') + "']"),   // 当前url对应的左侧导航对象
-                $navHasSubnav = $navObj.parents('.nav-item'),
-                $viSubHeight  = $navHasSubnav.siblings().find('.nav-subnav:visible').outerHeight();
+                $navIdName    = $navObj.parents('.nav-subnav').last().attr('id'),
+                $navHasSubnav = $('[data-nav-target="#' + $navIdName + '"]').parent();
             
-            $('.nav-item').each(function(i){
-                if ($(this).hasClass('active') && !$navObj.parents('.nav-item').last().hasClass('active')) {
-                    $(this).removeClass('active').removeClass('open');
-                    $(this).find('.nav-subnav:visible').slideUp(500);
-                    if (window.innerWidth > 1024 && $('body').hasClass('lyear-layout-sidebar-close')) {
-                        $(this).find('.nav-subnav').hide();
-                    }
-                }
-            });
+            $('.nav-item').removeClass('active');
+            var $theParentSubnav = $navObj.parent().parents('.nav-subnav').last();
             
-            $('.nav-drawer').find('li').removeClass('active');
+            if ($theParentSubnav.is(':hidden')) {
+                $('.lyear-layout-sub-column > ul').hide();
+                $theParentSubnav.fadeIn(500);
+            }
+            
+            $('.lyear-layout-sub-column').find('li').removeClass('active');
             $navObj.parent('li').addClass('active');
-            $navHasSubnav.first().addClass('active');
-            
-            // 当前菜单无子菜单
-            if (!$navObj.parents('.nav-item').first().is('.nav-item-has-subnav')) {
-                var hht = 48 * ( $navObj.parents('.nav-item').first().prevAll().length - 1 );
-                $('.lyear-layout-sidebar-scroll').animate({scrollTop: hht}, 300);
-            }
-            
-            if ($navObj.parents('ul.nav-subnav').last().is(':hidden')) {
-                $navObj.parents('ul.nav-subnav').last().slideDown(500, function(){
-                    $navHasSubnav.last().addClass('open');
-		            var scrollHeight  = 0,
-                        $scrollBox    = $('.lyear-layout-sidebar-scroll'),
-		                pervTotal     = $navHasSubnav.last().prevAll().length,
-		                boxHeight     = $scrollBox.outerHeight(),
-	                    innerHeight   = $('.sidebar-main').outerHeight(),
-                        thisScroll    = $scrollBox.scrollTop(),
-                        thisSubHeight = $(this).outerHeight(),
-                        footHeight    = 121;
-		            
-		            if (footHeight + innerHeight - boxHeight >= (pervTotal * 48)) {
-		                scrollHeight = pervTotal * 48;
-		            }
-                    if ($navHasSubnav.length == 1) {
-                        $scrollBox.animate({scrollTop: scrollHeight}, 300);
-                    } else {
-                        // 子菜单操作
-                        if (typeof($viSubHeight) != 'undefined' && $viSubHeight != null) {
-                            scrollHeight = thisScroll + thisSubHeight - $viSubHeight;
-                            $scrollBox.animate({scrollTop: scrollHeight}, 300);
-                        } else {
-                            if ((thisScroll + boxHeight - $scrollBox[0].scrollHeight) == 0) {
-                                scrollHeight = thisScroll - thisSubHeight;
-                                $scrollBox.animate({scrollTop: scrollHeight}, 300);
-                            }
-                        }
-                    }
-                });
-            }
+            $navHasSubnav.addClass('active');
         },
 
         /**
