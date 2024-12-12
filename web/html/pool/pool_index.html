@@ -1,11 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>质押池</title>
+    <link href="../../asserts/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../asserts/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="../../asserts/css/animate.min.css" rel="stylesheet">
+    <link href="../../asserts/css/style.min.css" rel="stylesheet">
+    <style>
+        .scroll-text {
+            white-space: nowrap;
+            overflow: hidden;
+            animation: scroll 10s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+                white-space: nowrap;
+                overflow: hidden;
+                animation: scroll 10s linear infinite;
+            }
+
+        }
+        
+
+        
+    </style>
 </head>
+<script type="text/javascript" src="../../asserts/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../asserts/js/popper.min.js"></script>
+<script type="text/javascript" src="../../asserts/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../asserts/js/Chart.min.js"></script>
+<script type="text/javascript" src="../../asserts/js/main.min.js"></script>
+
 <body>
-    质押池
+    <div class="lyear-layout-container">
+        <div class="row">
+            <marquee behavior="scroll" direction="left"  onmouseout="this.start();" onmouseover="this.stop();">
+                <p>
+                    <span class="">ETH 质押池</span><span class="text-danger">0.132%<i class="mdi mdi-arrow-down"></i></span>
+                    <span class="">RCC 质押池</span><span class="text-danger">0.132%<i class="mdi mdi-arrow-down"></i></span>
+                </p>
+            </marquee>
+        </div>
+        <div class="row">
+            <div class="col-8 card">
+                <header class="card-header">
+                    <div class="card-title">
+                        <label style="font-size: 20px; margin-left: 0px;">
+                            <strong>质押池</strong>
+                        </label>
+                    </div>
+
+                </header>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="media">
+                            <img class="mr-3" data-src="holder.js/180x250" alt="180x250"
+                                src="../../asserts/images/login-bg-1.jpg" data-holder-rendered="true"
+                                style="width: 180px; height: 250px; border-radius: 5px;">
+                            <div class="media-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h5 class="mt-0 mb-1"><a href="!#">ETH质押池</a></h5>
+                                            </div>
+                                            <div class="col-6" style="text-align: right;">
+                                                <span class="text-gray">未开始</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                目标金额：<span class="text-danger">2000,000</span>
+                                            </div>
+                                            <div class="col-4">
+                                                已质押：<span class="text-danger">1020,000</span>
+                                            </div>
+                                            <div class="col-4">
+                                                产生收益：<span class="text-danger">672,000</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                进&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：
+                                            </div>
+                                            <div class="col-8" style="text-align: left;">
+                                                <div class="progress" style="height: auto;">
+                                                    <div class="progress-bar" role="progressbar" style="width: 25%;"
+                                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">开始时间：2024-12-01 11:00:00 </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                结束时间：2024-12-01 11:00:00
+                                            </div>
+                                            <div class="col-6" style="text-align: right;">
+                                                <a class="btn  btn-outline-info">查看详情</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="media">
+                            <img class="mr-3" data-src="holder.js/180x250" alt="180x250"
+                                src="../../asserts/images/login-bg-2.jpg" data-holder-rendered="true"
+                                style="width: 180px; height: 250px; border-radius: 5px;">
+                            <div class="media-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h5 class="mt-0 mb-1"><a href="!#">USDT质押池</a></h5>
+                                            </div>
+                                            <div class="col-6" style="text-align: right;">
+                                                <span class="text-success">进行中</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                目标金额：<span class="text-danger">3000,000</span>
+                                            </div>
+                                            <div class="col-4">
+                                                已质押：<span class="text-danger">1020,000</span>
+                                            </div>
+                                            <div class="col-4">
+                                                产生收益：<span class="text-danger">672,000</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                进&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：
+                                            </div>
+                                            <div class="col-8" style="text-align: left;">
+                                                <div class="progress" style="height: auto;">
+                                                    <div class="progress-bar bg-yellow" role="progressbar"
+                                                        style="width: 55%;" aria-valuenow="25" aria-valuemin="0"
+                                                        aria-valuemax="100">25%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">开始时间：2024-12-01 11:00:00 </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                结束时间：2024-12-01 11:00:00
+                                            </div>
+                                            <div class="col-6" style="text-align: right;">
+                                                <a class="btn  btn-outline-info" href="#!">查看详情</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="media">
+                            <img class="mr-3" data-src="holder.js/180x250" alt="180x250"
+                                src="../../asserts/images/login-bg-3.jpg" data-holder-rendered="true"
+                                style="width: 180px; height: 250px; border-radius: 5px;">
+                            <div class="media-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <h5 class="mt-0 mb-1"><a href="!#">USDT质押池</a></h5>
+                                            </div>
+                                            <div class="col-6" style="text-align: right;">
+                                                <span class="text-danger">已结束</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                目标金额：<span class="text-danger">3000,000</span>
+                                            </div>
+                                            <div class="col-4">
+                                                已质押：<span class="text-danger">1020,000</span>
+                                            </div>
+                                            <div class="col-4">
+                                                产生收益：<span class="text-danger">672,000</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-2 w-80">
+                                                进&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：
+                                            </div>
+                                            <div class="col-8" style="text-align: left;">
+                                                <div class="progress" style="height: auto;">
+                                                    <div class="progress-bar bg-yellow" role="progressbar"
+                                                        style="width: 55%;" aria-valuenow="25" aria-valuemin="0"
+                                                        aria-valuemax="100">25%</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">开始时间：2024-12-01 11:00:00 </li>
+                                    <li class="list-group-item">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                结束时间：2024-12-01 11:00:00
+                                            </div>
+                                            <div class="col-6" style="text-align: right;">
+                                                <a class="btn  btn-outline-info" href="#!">查看详情</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-1">
+
+            </div>
+            <div class="col-3 card" style="height: 20%;">
+                <header class="card-header">
+                    <div class="card-title">
+                        <label style="font-size: 20px; margin-left: 0px;">
+                            <strong>标签</strong>
+                        </label>
+                    </div>
+
+                </header>
+                <div class="card-body" style="font-size: 16px;">
+                    <a href="#!" class="badge badge-pill badge-success">进行中</a>
+                    <a href="#!" class="badge badge-pill badge-warning">人数最多</a>
+                    <a href="#!" class="badge badge-pill badge-danger">收益最高</a>
+                    <a href="#!" class="badge badge-pill badge-dark">已结束</a>
+                    <a href="#!" class="badge badge-pill badge-secondary">未开始</a>
+                    <a href="#!" class="badge badge-pill badge-purple">玄幻仙侠</a>
+                </div>
+            </div>
+        </div>
+        <div class="row row-20">
+
+        </div>
+    </div>
 </body>
+
 </html>
