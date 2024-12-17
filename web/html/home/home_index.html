@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <title>可用的一些布局(数据统计篇) - 光年(Light Year Admin)后台管理系统模板</title>
+  <title>RCC代币质押 首页</title>
   <link rel="icon" href="favicon.ico" type="image/ico">
   <meta name="keywords" content="LightYear,光年,后台模板,后台管理系统,光年HTML模板">
   <meta name="description" content="LightYear是一个基于Bootstrap v3.3.7的后台管理系统的HTML模板。">
@@ -34,28 +34,6 @@
 <script type="text/javascript" src="../../asserts/js/main.min.js"></script>
 <script>
   $(function () {
-
-    var scrollFlag = false
-    var topInstance = $('#right_top').offset().top
-    // $(window).scroll(function () {
-    //   //$(document).scrollTop() 获取垂直滚动的距离
-    //   //$(document).scrollLeft() 这是获取水平滚动条的距离
-    //   if ($(document).scrollTop() <= 0) {
-    //     console.info("滚动到顶部")
-    //     $('.row_right').css("top", topInstance)
-    //     $('#right_top').addClass("row_right")
-    //     scrollFlag = false
-    //   }
-
-    //   console.info("scrollTop: " + $(document).scrollTop() + "document height: " + $(document).height() + "; window.height: " + $(window).height())
-    //   if (($(document).scrollTop() / $(document).height()) > 0.1 && !scrollFlag) {
-    //     console.info("超过0.1： " + topInstance)
-    //     $('.row_right').css("top", "-160px")
-    //     $('#right_top').addClass("row_right")
-    //   }
-
-    // });
-
     initChats()
   })
 
@@ -150,129 +128,132 @@
     </div>
 
     <div class="row">
-      <div class="col-8" style="border-right: 1px solid red;">
-         <div class="row">
-          <div class="card col-4">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>合约状态</strong>
-              </h5>
-  
-              <p>
-                <span style="font-size: 12px; color: gray;">
-                  合约地址
-                </span>
-                </br>
-                <span style="font-size: 14px; color: black;">
-                  <a href="#!">husw79Qzi81Hgsnu12jzq0MLaa75j4X</a>
-                </span>
-              </p>
-              <p>
-                <span style="font-size: 12px; color: gray;">
-                  版本
-                </span>
-                </br>
-                <span style="font-size: 14px; color: black;" class="text-info">
-                  V 1.0.0.1
-                </span>
-              </p>
-  
-              <p>
-                <span style="font-size: 12px; color: gray;">
-                  ChanID
-                </span>
-                </br>
-                <span style="font-size: 14px; color: black;" class="text-info">
-                  1165511
-                </span>
-              </p>
-              <p>
-                <span style="font-size: 12px; color: gray;">
-                  部署时间
-                </span>
-                </br>
-                <span style="font-size: 14px; color: black;" class="text-info">
-                  2024-06-13
-                </span>
-              </p>
-            </div>
-          </div>
-          <div class="card col-8">
-            <div class="card-body">
-              <h5 class="card-title">
-                <strong>最近收益</strong>
-              </h5>
-              <div class="row">
-                <table class="table table-borderless table-hover">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span class="text-gray">Price</span>
-                        </br>
-                        <span class="text-black" style="font-size: 16px;"><strong>$3.7</strong</span> <span
+      <div class="col-8">
+        <div class="row">
+          <div class="col-12">
+            <div class="card-group">
+              <div class="card col-4">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <strong>合约状态</strong>
+                  </h5>
+      
+                  <p>
+                    <span style="font-size: 12px; color: gray;">
+                      合约地址
+                    </span>
+                    </br>
+                    <span style="font-size: 14px; color: black;">
+                      <a href="#!">husw79Qzi81Hgsnu12jzq0MLaa75j4X</a>
+                    </span>
+                  </p>
+                  <p>
+                    <span style="font-size: 12px; color: gray;">
+                      版本
+                    </span>
+                    </br>
+                    <span style="font-size: 14px; color: black;" class="text-info">
+                      V 1.0.0.1
+                    </span>
+                  </p>
+      
+                  <p>
+                    <span style="font-size: 12px; color: gray;">
+                      ChanID
+                    </span>
+                    </br>
+                    <span style="font-size: 14px; color: black;" class="text-info">
+                      1165511
+                    </span>
+                  </p>
+                  <p>
+                    <span style="font-size: 12px; color: gray;">
+                      部署时间
+                    </span>
+                    </br>
+                    <span style="font-size: 14px; color: black;" class="text-info">
+                      2024-06-13
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="card col-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <strong>最近收益</strong>
+                  </h5>
+                  <div class="row">
+                    <table class="table table-borderless table-hover">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <span class="text-gray">Price</span>
+                            </br>
+                            <span class="text-black" style="font-size: 16px;"><strong>$3.7</strong</span> <span
+                                  class="text-gray">USD</span>
+                          </td>
+                          </td>
+                          <td>
+                            <span class="text-gray">Volumn 24h</span>
+                            </br>
+                            <span class="text-black" style="font-size: 16px;"><strong>$32.7M</strong></span> <span
                               class="text-gray">USD</span>
-                      </td>
-                      </td>
-                      <td>
-                        <span class="text-gray">Volumn 24h</span>
-                        </br>
-                        <span class="text-black" style="font-size: 16px;"><strong>$32.7M</strong></span> <span
-                          class="text-gray">USD</span>
-                      </td>
-                      <td>
-                        <span class="text-gray">Market Cap</span>
-                        </br>
-                        <span class="text-black" style="font-size: 16px;"><strong>$32.7B</strong></span> <span
-                          class="text-gray">USD</span>
-  
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <span class="text-gray">Change 1h</span>
-                        </br>
-                        <span class="text-danger" style="font-size: 16px;"><strong>-0.28%</strong></span><i
-                          class="mdi mdi-arrow-down text-danger"></i>
-                      </td>
-                      <td>
-                        <span class="text-gray">Change 24h</span>
-                        </br>
-                        <span class="text-danger" style="font-size: 16px;"><strong>-2.75%</strong></span><i
-                          class="mdi mdi-arrow-down text-danger"></i>
-                      </td>
-                      <td>
-                        <span class="text-gray">Change 7d</span>
-                        </br>
-                        <span class="text-success" style="font-size: 16px;"><strong>12.02%</strong></span><i
-                          class="mdi mdi-arrow-up text-success"></i>
-                      </td>
-                    </tr>
-                  </tbody>
-  
-                </table>
-              </div>
-              <div class="row row-5">
-                <canvas id="chart-line-4" width="100%" height="40%"></canvas>
-              </div>
-              <div class="row row-2">
-                <div class="col-5">
-                  <span class="text-gray">历史总质押</span>
-                  </br>
-                  <span class="text-black" style="font-size: 16px;"><strong>17334,123,000 ETH</strong></span>
+                          </td>
+                          <td>
+                            <span class="text-gray">Market Cap</span>
+                            </br>
+                            <span class="text-black" style="font-size: 16px;"><strong>$32.7B</strong></span> <span
+                              class="text-gray">USD</span>
+      
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="text-gray">Change 1h</span>
+                            </br>
+                            <span class="text-danger" style="font-size: 16px;"><strong>-0.28%</strong></span><i
+                              class="mdi mdi-arrow-down text-danger"></i>
+                          </td>
+                          <td>
+                            <span class="text-gray">Change 24h</span>
+                            </br>
+                            <span class="text-danger" style="font-size: 16px;"><strong>-2.75%</strong></span><i
+                              class="mdi mdi-arrow-down text-danger"></i>
+                          </td>
+                          <td>
+                            <span class="text-gray">Change 7d</span>
+                            </br>
+                            <span class="text-success" style="font-size: 16px;"><strong>12.02%</strong></span><i
+                              class="mdi mdi-arrow-up text-success"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+      
+                    </table>
+                  </div>
+                  <div class="row row-5">
+                    <canvas id="chart-line-4" width="100%" height="40%"></canvas>
+                  </div>
+                  <div class="row row-2">
+                    <div class="col-5">
+                      <span class="text-gray">历史总质押</span>
+                      </br>
+                      <span class="text-black" style="font-size: 16px;"><strong>17334,123,000 ETH</strong></span>
+                    </div>
+                    <div class="col-5">
+      
+                      <span class="text-gray">历史总收益</span>
+                      </br>
+                      <span class="text-black" style="font-size: 16px;"><strong>234,988,000 RC</strong></span>
+                    </div>
+      
+                  </div>
                 </div>
-                <div class="col-5">
-  
-                  <span class="text-gray">历史总收益</span>
-                  </br>
-                  <span class="text-black" style="font-size: 16px;"><strong>234,988,000 RC</strong></span>
-                </div>
-  
               </div>
             </div>
           </div>
-   
-         </div>
-         <div class="row">
+        </div>
+         <div class="row" style="margin-top: 20px;">
           <div class="col-12">
             <div class="card">
               <header class="card-header">
@@ -342,7 +323,7 @@
                               结束时间：2024-12-01 11:00:00
                             </div>
                             <div class="col-6" style="text-align: right;">
-                              <a class="btn  btn-outline-info">查看详情</a>
+                              <a class="btn  btn-outline-info" href="#!">查看详情</a>
                             </div>
                           </div>
                         </li>
@@ -601,144 +582,178 @@
       </div>
 
       <div class="col-4">
-        <div class="card" id="right_top">
+        <div class="card">
           <div class="card-body">
-            <h5 class="card-title">
+            <div class="row">
+              <div class="col-1"> 
+                <i class="mdi mdi-alert-outline mdi-48px text-warning"></i>
+              </div>
+              <div class="col-10"> 
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <span class="text-danger">风险提示： </span>防范以“虚拟货币”“区块链”名义进行非法集资的风险<span>
+                      <div style="float: right; margin-top: 10px;">
+                        <span style="color: #1383C6;"> <a href="#!"></a>——银保监会等五部门</span>
+                      </div>
+                  </li>
+                  <li class="list-group-item">
+                    <span class="text-danger">免责声明：</span>本站数据，合约地址以及相关源码仅在测试链使用，并且全部开源，本站不做任何盈利行为，仅供交流使用。任何人和组织不得以本项目从事非法行为，否则一切后果与本站无关
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: left;">
               <strong>每周收益榜</strong>
             </h5>
-            <div class="row">
-              <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-top">
-                  <div class="col-4">
-                    <span>排行</span>
-                  </div>
-                  <div class="col-4">
-                    账户
-                  </div>
-                  <div class="col-4">
-                    收益
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <div class="col-4">
-                    <span class="badge badge-danger badge-pill">1</span>
-                  </div>
-                  <div class="col-4">
-                    asdf****1d3A
-                  </div>
-                  <div class="col-4">
-                    2455 RC
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <div class="col-4">
-                    <span class="badge badge-warning badge-pill">2</span>
-                  </div>
-                  <div class="col-4">
-                    asdf****1d3A
-                  </div>
-                  <div class="col-4">
-                    2455 RC
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <div class="col-4">
-                    <span class="badge badge-success badge-pill">3</span>
-                  </div>
-                  <div class="col-4">
-                    asdf****1d3A
-                  </div>
-                  <div class="col-4">
-                    2455 RC
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <div class="col-4">
-                    <span class="badge badge-secondary badge-pill">4</span>
-                  </div>
-                  <div class="col-4">
-                    asdf****1d3A
-                  </div>
-                  <div class="col-4">
-                    2455 RC
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <div class="col-4">
-                    <span class="badge badge-secondary badge-pill">5</span>
-                  </div>
-                  <div class="col-4">
-                    asdf****1d3A
-                  </div>
-                  <div class="col-4">
-                    2455 RC
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <div class="col-4">
-                    <span class="badge badge-secondary badge-pill">6</span>
-                  </div>
-                  <div class="col-4">
-                    asdf****1d3A
-                  </div>
-                  <div class="col-4">
-                    2455 RC
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <div class="col-4">
-                    <span class="badge badge-secondary badge-pill">7</span>
-                  </div>
-                  <div class="col-4">
-                    asdf****1d3A
-                  </div>
-                  <div class="col-4">
-                    2455 RC
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <div class="col-4">
-                    <span class="badge badge-secondary badge-pill">8</span>
-                  </div>
-                  <div class="col-4">
-                    asdf****1d3A
-                  </div>
-                  <div class="col-4">
-                    2455 RC
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <div class="col-4">
-                    <span class="badge badge-secondary badge-pill">9</span>
-                  </div>
-                  <div class="col-4">
-                    asdf****1d3A
-                  </div>
-                  <div class="col-4">
-                    2455 RC
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <div class="col-4">
-                    <span class="badge badge-secondary badge-pill">10</span>
-                  </div>
-                  <div class="col-4">
-                    asdf****1d3A
-                  </div>
-                  <div class="col-4">
-                    2455 RC
-                  </div>
-                </li>
-              </ul>
+            <div class="col" style="text-align: left;">
+              <table class="table table-borderless table-hover">
+                  <thead>
+                    <tr>
+                      <th>排行</th>
+                      <th>账户</th>
+                      <th>收益</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="badge badge-danger badge-pill">1</span></td>
+                      <td>asdf****1d3A</td>
+                      <td><span class="text-danger">25 RC</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-warning badge-pill">2</span></td>
+                      <td>Bgfx****iu7M</td>
+                      <td><span class="text-warning">24 RC</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-success badge-pill">3</span></td>
+                      <td>H8ss****50Bs</td>
+                      <td><span class="text-success">20 RC</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="badge badge-secondary badge-pill">4</span></td>
+                      <td>H8ss****50Bs</td>
+                      <td>19 RC</td>
+                    </tr>
+                     <tr>
+                      <td><span class="badge badge-secondary badge-pill">5</span></td>
+                      <td>H8ss****50Bs</td>
+                      <td>19 RC</td>
+                    </tr>
+                     <tr>
+                      <td><span class="badge badge-secondary badge-pill">6</span></td>
+                      <td>H8ss****50Bs</td>
+                      <td>19 RC</td>
+                    </tr>
+                     <tr>
+                      <td><span class="badge badge-secondary badge-pill">7</span></td>
+                      <td>H8ss****50Bs</td>
+                      <td>19 RC</td>
+                    </tr>
+                     <tr>
+                      <td><span class="badge badge-secondary badge-pill">8</span></td>
+                      <td>H8ss****50Bs</td>
+                      <td>19 RC</td>
+                    </tr>
+                     <tr>
+                      <td><span class="badge badge-secondary badge-pill">9</span></td>
+                      <td>H8ss****50Bs</td>
+                      <td>19 RC</td>
+                    </tr>
+                     <tr>
+                      <td><span class="badge badge-secondary badge-pill">10</span></td>
+                      <td>H8ss****50Bs</td>
+                      <td>19 RC</td>
+                    </tr>
+                  </tbody>
+              </table>
             </div>
            
           </div>
         </div>
+
+        <div class="card">
+           <div class="card-body">
+            <h5 class="card-title" style="text-align: left;">
+              <strong>热门标签</strong>
+            </h5>
+            <div class="col w-80" style="text-align: left; font-size: 18px; padding: 5px;">
+              <table class="table table-borderless">
+                <tr>
+                  <td><a href="#!" class="badge badge-pill badge-success">进行中</a></td>
+                  <td><a href="#!" class="badge badge-pill badge-warning">人数最多</a></td>
+                  <td><a href="#!" class="badge badge-pill badge-danger">收益最高</a></td>
+                  <td><a href="#!" class="badge badge-pill badge-dark">已结束</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#!" class="badge badge-pill badge-secondary">未开始</a></td>
+                  <td><a href="#!" class="badge badge-pill badge-purple">ETH</a></td>
+                  <td><a href="#!" class="badge badge-pill badge-info">USDT</a></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+           
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: left;">
+              <strong>常见问题</strong>
+            </h5>
+            <div class="col w-80" style="text-align: left; font-size: 14px;">
+              <ul class="list-group list-group-flush p-t-5">
+               <li class="list-group-item">
+                 <a href="#!"><span class="text-black">1. 什么是代币质押？</span></a>
+               </li>
+               <li class="list-group-item">
+                <a href="#!">2. 如何获取收益？</a>
+               </li>
+               <li class="list-group-item">
+                <a href="#!">3. 中途退出怎么办？</a>
+               </li>
+               <li class="list-group-item">
+                <a href="#!">4. 质押的代币有风险吗？</a>
+               </li>
+               <li class="list-group-item">
+                <a href="#!">5. 收益计算规则？</a>
+               </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+           <h5 class="card-title" style="text-align: left;">
+             <strong>联系我们</strong>
+           </h5>
+           <div class="col w-80" style="text-align: left; font-size: 16px;">
+             <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <a href="#!"><span class="img-avatar img-avatar-48 bg-translucent text-warning"><i class="mdi mdi-qqchat fs-22"></i>&nbsp;&nbsp;&nbsp;466830255</span></a>
+              </li>
+              <li class="list-group-item">
+                <a href="#!"><span class="img-avatar img-avatar-48 bg-translucent text-warning"><i class="mdi mdi-wechat fs-22"></i>&nbsp;&nbsp;&nbsp;mingdong1129</span></a>
+              </li>
+              <li class="list-group-item">
+                <a href="#!"> <span class="img-avatar img-avatar-48 bg-translucent text-warning"><i class="mdi mdi-cellphone fs-22"></i>&nbsp;&nbsp;&nbsp;18710181258</span></a>
+              </li>
+              <li class="list-group-item">
+                <a href="#!"> <span class="img-avatar img-avatar-48 bg-translucent text-warning"><i class="mdi mdi-email-outline fs-22"></i>&nbsp;&nbsp;&nbsp;7023302@qq.com</span></a>
+              </li>
+             </ul>
+           </div>
+          
+         </div>
+       </div>
       </div>
-
-    </div>
-    <div class="row" style="height: 400px;">
-
     </div>
   </div>
 
